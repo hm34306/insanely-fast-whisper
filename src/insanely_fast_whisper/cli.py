@@ -149,8 +149,6 @@ def main() -> None:
 
     if args.device_id == "mps":
         torch.mps.empty_cache()
-    # elif not args.flash:
-    #     pipe.model = pipe.model.to_bettertransformer()
 
     ts = "word" if args.timestamp == "word" else True
 
