@@ -7,7 +7,7 @@ class JsonTranscriptionResult(TypedDict):
     text: str
 
 
-def build_result(transcript, outputs) -> JsonTranscriptionResult:
+def build_result(transcript:str, outputs:dict[str]) -> JsonTranscriptionResult:
     return {
         "speakers": transcript,
         "chunks": outputs["chunks"],
